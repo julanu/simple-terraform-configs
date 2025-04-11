@@ -1,0 +1,22 @@
+name: "Terraform Plan & Apply"
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  test-infrastructure:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Terraform
+        uses: julanu/composite-actions/terraform-cli-deploy@dev-release
+        with:
+          initArguments: "-reconfigure"
+          additionalArguments: "-var-file=env/devel.tfvars -no-color"
+          working-directory: "infra/"
