@@ -15,4 +15,4 @@ jobs:
         with:
           initArguments: "-reconfigure"
           additionalArguments: "-var-file=vars/randoms.tfvars -no-color"
-          working-directory: "infra/"
+          workingDirectory: "infra/"
