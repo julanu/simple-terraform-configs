@@ -16,3 +16,4 @@ jobs:
           initArguments: "-reconfigure"
           additionalArguments: "-var-file=vars/randoms.tfvars -no-color"
           workingDirectory: "infra/"
+          mainOnlyApply: "false"
