@@ -1,7 +1,6 @@
 name: "Terraform Plan & Apply"
 
-on:
-  workflow_dispatch:
+on: push
 
 jobs:
   test-infrastructure:
