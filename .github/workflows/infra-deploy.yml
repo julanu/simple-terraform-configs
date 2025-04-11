@@ -14,5 +14,5 @@ jobs:
         uses: julanu/composite-actions/terraform-cli-deploy@dev-release
         with:
           initArguments: "-reconfigure"
-          additionalArguments: "-var-file=env/randoms.tfvars -no-color"
+          additionalArguments: "-var-file=vars/randoms.tfvars -no-color"
           working-directory: "infra/"
